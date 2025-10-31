@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', 'Lato', sans-serif;
+}
+
+.navbar {
+	position: fixed;
+  background-color: rgba(16, 16, 29, 0.9);
+  padding: 1rem;
+	display: flex;
+	width: 100%;
+  height: 100px;
+	padding: 0px 20px;
+
+  &__container {
+		width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    &-main {
+      color: #fff;
+    }
+
+    &-accent {
+      color: #42A9ED;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &-line {
+      width: 25px;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(16, 16, 29, 0.95);
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 3.75rem;
+    list-style: none;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+
+  &__item {
+    &--active .navbar__link {
+      color: #42A9ED;
+    }
+  }
+
+  &__link {
+		font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8125rem;
+
+    &:hover {
+      color: #90a0b4;
+    }
+  }
+}
+
+.promo {
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url('../img/businessmans.png');
+	background-size: cover;
+	background-position: center;
+
+  &__container {
+    display: flex;
+		max-width: 1170px;
+		width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+		margin-top: 5rem;
+  }
+
+  &__content {
+		max-width: 66%;
+    flex: 1 1 500px;
+  }
+
+  &__title {
+		font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+
+    &-accent {
+      color: #42A9ED;
+    }
+  }
+
+  &__subtitle {
+		font-family: 'Lato', sans-serif;
+		margin-top: 90px;
+    font-size: 1.25rem;
+		font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+    list-style: none;
+    margin-bottom: 1.5rem;
+		margin-left: 0.5rem;
+		font-size: 1.25rem;
+  }
+
+  &__item {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+		margin-top: 5rem;
+  }
+
+  &__btn {
+		font-family: 'Lato', sans-serif;
+		width: 180px;
+		height: 43px;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+		border-radius: 4px;
+
+    &--primary {
+      background-color: #3E9CDC;
+      color: #fff;
+			border: 1px solid #fff;
+    }
+
+    &--secondary {
+      background-color: #fff;
+      color: #2A2B30;
+      border: 1px solid #6F6D7B;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo__container {
+    flex-direction: column;
+  }
+
+  .promo__image {
+    width: 100%;
+    height: 250px;
+    margin-top: 1rem;
+  }
+
+  .promo__title {
+    font-size: 1.5rem;
+  }
+
+  .promo__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
