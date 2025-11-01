@@ -24,7 +24,7 @@
           <li class="navbar__item navbar__item--active"><a href="#" class="navbar__link">БИЗНЕС</a></li>
           <li class="navbar__item"><a href="#" class="navbar__link">О НАС</a></li>
           <li class="navbar__item"><a href="#" class="navbar__link">ЦЕНЫ</a></li>
-          <li class="navbar__item"><a href="#" class="navbar__link">ОФОРМИТЬ ЗАКАЗ</a></li>
+          <li class="navbar__item"><a href="#order__form" class="navbar__link">ОФОРМИТЬ ЗАКАЗ</a></li>
         </ul>
       </nav>
     </div>
@@ -58,77 +58,54 @@
 
     <div class="order__steps">
       <div class="order__step">
-        <div class="order__step-wrapper">
-					<div class="order__icon order__icon--doc"></div>
+					<div class="order__icon order__icon--search">
+						<img class="order__icon--img" src="./img/search.svg" alt="search">
+					</div>
         	<p class="order__text">Lorem ipsum dolor sit amet</p>
-				</div>
-				<div class="order__dots">
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-				</div>
       </div>
       <div class="order__step">
-				<div class="order__step-wrapper">
-					<div class="order__icon order__icon--gear"></div>
+					<div class="order__icon order__icon--percent">
+						<img class="order__icon--img" src="./img/percent.svg" alt="percent">
+					</div>
         	<p class="order__text">Consecteturadipiscing elit</p>
-				</div>
-				<div class="order__dots">
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-				</div>
       </div>
       <div class="order__step">
-				<div class="order__step-wrapper">
-					<div class="order__icon order__icon--clock"></div>
+					<div class="order__icon order__icon--document">
+						<img class="order__icon--img" src="./img/file.svg" alt="file">
+					</div>
         	<p class="order__text">Sed do eiusmod tempor</p>
-				</div>
-				<div class="order__dots">
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-				</div>
       </div>
       <div class="order__step">
-				<div class="order__step-wrapper">
-					<div class="order__icon order__icon--cart"></div>
+					<div class="order__icon order__icon--mail">
+						<img class="order__icon--img" src="./img/message.svg" alt="message">
+					</div>
         	<p class="order__text">Esse cillum dolore eu fugiat</p>
-				</div>
-        <div class="order__dots">
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-					<div class="order__dot"></div>
-				</div>
       </div>
       <div class="order__step">
-        <div class="order__icon order__icon--globe"></div>
-        <p class="order__text">Excepteur sint occaecat cupidatat non proident</p>
+					<div class="order__icon order__icon--money">
+						<img class="order__icon--img" src="./img/money.svg" alt="money">
+					</div>
+					<p class="order__text">Excepteur sint occaecat cupidatat non proident</p>
       </div>
+			<div class="order__dots_wrapper">
+				<img src="./img/dots.png" alt="dots">
+				<img src="./img/dots.png" alt="dots">
+				<img src="./img/dots.png" alt="dots">
+				<img src="./img/dots.png" alt="dots">
+			</div>
     </div>
 
-    <form class="order__form">
+    <form class="order__form" id="order__form">
       <div class="order__fields">
         <select class="order__input">
           <option disabled selected>Выберите тип системы</option>
         </select>
         <input type="email" class="order__input" placeholder="Ваш e-mail" />
         <input type="text" class="order__input" placeholder="Ваше имя" />
-        <label class="order__file">
-          <input type="file" hidden />
-          ПРИКРЕПИТЬ ФАЙЛ
-        </label>
       </div>
 
-      <div class="order__progress">
+      <div class="order__fields">
+				<div class="order__progress">
         <label class="order__progress-label">Sed ut perspiciatis, unde omnis iste natus</label>
         <div class="order__progress-bar">
           <div class="order__progress-fill" style="width: 75%"></div>
@@ -136,7 +113,11 @@
         </div>
       </div>
 
-      <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
+			<label class="order__file">
+				<input type="file" hidden />ПРИКРЕПИТЬ ФАЙЛ
+			</label>
+			</div>
+			<button type="submit" class="order__submit">ОТПРАВИТЬ</button>
     </form>
   </div>
 </section>
