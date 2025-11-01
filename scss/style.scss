@@ -16,6 +16,9 @@ body {
 	width: 100%;
   height: 100px;
 	padding: 0px 20px;
+	transform: translateY(-100%);
+  opacity: 0;
+  animation: navbar-slide-in 0.6s ease-out forwards;
 
   &__container {
 		width: 100%;
@@ -103,7 +106,14 @@ body {
       color: #90a0b4;
     }
   }
+			@keyframes navbar-slide-in {
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}		
 }
+
 
 .promo {
 	display: flex;
@@ -112,6 +122,7 @@ body {
 	background-image: url('../img/businessmans.png');
 	background-size: cover;
 	background-position: center;
+	padding: 0px 20px;
 
   &__container {
     display: flex;
@@ -182,7 +193,7 @@ body {
 		border-radius: 4px;
 
     &--primary {
-      background-color: #3E9CDC;
+      background-color: #42A9ED;
       color: #fff;
 			border: 1px solid #fff;
     }
@@ -213,5 +224,195 @@ body {
   .promo__btn {
     width: 100%;
     text-align: center;
+  }
+}
+
+.order {
+  background-color: #272733;
+	font-family: 'Lato', sans-serif;
+  color: #fff;
+  padding: 4rem 1rem;
+	background-image: url('../img/layer.png');
+	background-size: cover;	
+	background-position: center;
+	padding: 7.5rem 20px;
+
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &-accent {
+      color: #42A9ED;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 2rem;
+		margin-bottom: 5rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+		color: #BBBBBB;
+  }
+
+  &__steps {
+    display: flex;
+		max-width: 1165px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    gap: 1rem;
+  }
+
+  &__step {
+    flex: 1 1 150px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+	&__step-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    background-color: #42a9ed;
+    border-radius: 50%;
+		border: 5px solid #286690;
+
+    &--doc::before { content: '📄'; }
+    &--gear::before { content: '⚙️'; }
+    &--clock::before { content: '⏰'; }
+    &--cart::before { content: '🛒'; }
+    &--globe::before { content: '🌐'; }
+
+    &::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    max-width: 140px;
+  }
+
+	&__dots {
+		display: flex;
+	}
+
+	&__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #b4b4b4;
+		margin: 0 10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__input {
+    background-color: #2a2b30;
+    border: 1px solid #6f6d7b;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    min-width: 220px;
+  }
+
+  &__file {
+    background-color: #2a2b30;
+    border: 1px solid #6f6d7b;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 220px;
+  }
+
+  &__progress {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  &__progress-label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  &__progress-bar {
+    position: relative;
+    background-color: #2a2b30;
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  &__progress-fill {
+    background-color: #42a9ed;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  &__progress-value {
+    position: absolute;
+    right: 0;
+    top: -1.5rem;
+    font-size: 0.75rem;
+  }
+
+  &__submit {
+    background-color: #3e9cdc;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .order__steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order__fields {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order__input,
+  .order__file {
+    width: 100%;
+    max-width: 300px;
   }
 }
