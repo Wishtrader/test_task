@@ -96,31 +96,76 @@
     </div>
 
     <form class="order__form" id="order__form">
-      <div class="order__fields">
-        <select class="order__input">
-          <option disabled selected>Выберите тип системы</option>
-        </select>
-        <input type="email" class="order__input" placeholder="Ваш e-mail" />
-        <input type="text" class="order__input" placeholder="Ваше имя" />
-      </div>
+  <div class="order__fields">
+    <select class="order__input" name="system_type" required>
+      <option disabled selected>Выберите тип системы</option>
+      <option value="type1">Тип 1</option>
+      <option value="type2">Тип 2</option>
+    </select>
+    <input type="email" class="order__input" name="email" placeholder="Ваш e-mail" required />
+    <input type="text" class="order__input" name="name" placeholder="Ваше имя" required />
+  </div>
 
-      <div class="order__fields">
-				<div class="order__progress">
-        <label class="order__progress-label">Sed ut perspiciatis, unde omnis iste natus</label>
-        <div class="order__progress-bar">
-          <div class="order__progress-fill" style="width: 75%"></div>
-          <span class="order__progress-value">75%</span>
-        </div>
+  <div class="order__fields">
+    <div class="order__progress">
+      <label class="order__progress-label">Sed ut perspiciatis, unde omnis iste natus</label>
+      <div class="order__progress-bar">
+        <div class="order__progress-fill" style="width: 75%">
+					<div class="order__progress-circle"></div>
+				</div>
+        <span class="order__progress-value">75%</span>
       </div>
+    </div>
 
-			<label class="order__file">
-				<input type="file" hidden />ПРИКРЕПИТЬ ФАЙЛ
-			</label>
-			</div>
-			<button type="submit" class="order__submit">ОТПРАВИТЬ</button>
-    </form>
+    <label class="order__file">
+      <img class="order__file-icon" src="./img/doc.svg" alt="file">
+      <input type="file" name="attachment" hidden />ПРИКРЕПИТЬ ФАЙЛ
+    </label>
+  </div>
+
+  <button type="submit" class="order__submit">ОТПРАВИТЬ</button>
+</form>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column footer__column--left">
+      <p class="footer__copyright">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+    </div>
+
+    <div class="footer__column footer__column--center">
+      <div class="footer__item">
+        <img class="footer__icon" src="./img/qiwi.svg" alt="qiwi">
+        <span class="footer__text">QIWI Wallet</span>
+      </div>
+      <div class="footer__item">
+        <img class="footer__icon" src="./img/yandex.svg" alt="yomoney">
+        <span class="footer__text">Yandex Money</span>
+      </div>
+      <div class="footer__item">
+        <img class="footer__icon" src="./img/wm.svg" alt="webmoney">
+        <span class="footer__text">Web Money</span>
+      </div>
+    </div>
+
+    <div class="footer__column footer__column--right">
+      <div class="footer__item">
+        <img class="footer__icon" src="./img/mail.svg" alt="email">
+        <span class="footer__text">
+					<a class="footer__link" href="mailto:InfoSpace2000.com">InfoSpace2000.com</a>
+				</span>
+      </div>
+      <div class="footer__item">
+        <img class="footer__icon" src="./img/vk.svg" alt="vkontakte">
+        <span class="footer__text">
+					<a class="footer__link" href="http://vk.ru">Мы вконтакте</a>
+				</span>
+      </div>
+    </div>
+		<p class="footer__copyright--mobile">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
 </body>
